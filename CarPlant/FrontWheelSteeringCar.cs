@@ -18,13 +18,13 @@ namespace CarPlant
 			RearRight = new Wheel("rear right");
 		}
 
-		public void TurnLeft(int degrees)
+		public virtual void TurnLeft(int degrees)
 		{
 			FrontLeft.TurnLeft(degrees);
 			FrontRight.TurnLeft(degrees);
 		}
 
-		public void TurnRight(int degrees)
+		public virtual void TurnRight(int degrees)
 		{
 			FrontLeft.TurnRight(degrees);
 			FrontRight.TurnRight(degrees);
