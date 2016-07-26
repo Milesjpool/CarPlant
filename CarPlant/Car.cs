@@ -1,19 +1,19 @@
 namespace CarPlant
 {
-	public abstract class Car
+	public class Car
 	{
 		private readonly ISteeringMechanism _steeringMechanism;
 		private readonly IDriveMechanism _driveMechanism;
 		private readonly string _name;
 
-		protected Car(string name, ISteeringMechanism steeringMechanism, IDriveMechanism driveMechanism)
+		public Car(string name, ISteeringMechanism steeringMechanism, IDriveMechanism driveMechanism)
 		{
 			_name = name;
 			_steeringMechanism = steeringMechanism;
 			_driveMechanism = driveMechanism;
 		}
 
-		public virtual string Name()
+		public string Name()
 		{
 			return _name;
 		}
