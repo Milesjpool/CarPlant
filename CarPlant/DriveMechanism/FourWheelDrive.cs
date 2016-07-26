@@ -1,4 +1,4 @@
-namespace CarPlant
+namespace CarPlant.DriveMechanism
 {
 	public class FourWheelDrive : IDriveMechanism
 	{
