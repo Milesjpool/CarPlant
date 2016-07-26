@@ -2,7 +2,7 @@ namespace CarPlant
 {
 	class ToyotaCorolla : FrontWheelDriveCar
 	{
-		public ToyotaCorolla(WheelSet wheelSet) : base(wheelSet)
+		public ToyotaCorolla(WheelSet wheelSet) : base(wheelSet, new TwoWheelSteering(wheelSet))
 		{
 		}
 

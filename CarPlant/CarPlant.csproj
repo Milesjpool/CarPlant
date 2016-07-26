@@ -80,6 +80,7 @@
     <Compile Include="Car.cs" />
     <Compile Include="CarPlant.cs" />
     <Compile Include="FourWheelDriveCar.cs" />
+    <Compile Include="FrontWheelDrive.cs" />
     <Compile Include="FrontWheelDriveCar.cs" />
     <Compile Include="ISteeringMechanism.cs" />
     <Compile Include="MitsubishiTriton.cs" />

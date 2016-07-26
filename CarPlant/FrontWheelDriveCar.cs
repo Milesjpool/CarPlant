@@ -3,16 +3,17 @@ namespace CarPlant
 	abstract class FrontWheelDriveCar : Car
 	{
 		private readonly WheelSet _wheelSet;
+		private readonly FrontWheelDrive _frontWheelDrive;
 
-		protected FrontWheelDriveCar(WheelSet wheelSet) : base(new TwoWheelSteering(wheelSet))
+		protected FrontWheelDriveCar(WheelSet wheelSet, ISteeringMechanism steeringMechanism) : base(steeringMechanism)
 		{
 			_wheelSet = wheelSet;
+			_frontWheelDrive = new FrontWheelDrive(wheelSet);
 		}
 
 		public override void Accelerate(int kph)
 		{
-			_wheelSet.FrontLeft.Rotate(kph);
-			_wheelSet.FrontRight.Rotate(kph);
+			_frontWheelDrive.Accelerate(kph);
 		}
 	}
 }

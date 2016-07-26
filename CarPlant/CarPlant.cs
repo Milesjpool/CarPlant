@@ -15,7 +15,8 @@ namespace CarPlant {
 
 		public static Car MakeMitsubishiTriton()
 		{
-			return new MitsubishiTriton(new WheelSet());
+			WheelSet wheelSet = new WheelSet();
+			return new MitsubishiTriton(wheelSet, new TwoWheelSteering(wheelSet));
 		}
 
 		public static Car MakeSandBuggy()
