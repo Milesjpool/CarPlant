@@ -6,22 +6,22 @@ namespace CarPlant
 		public abstract void Accelerate(int kmsPerHour);
 
 		private readonly WheelSet _wheelSet;
+		private readonly TwoWheelSteering _twoWheelSteering;
 
 		protected Car(WheelSet wheelSet)
 		{
 			_wheelSet = wheelSet;
+			_twoWheelSteering = new TwoWheelSteering(_wheelSet);
 		}
 
 		public virtual void TurnLeft(int degrees)
 		{
-			_wheelSet.FrontLeft.TurnLeft(degrees);
-			_wheelSet.FrontRight.TurnLeft(degrees);
+			_twoWheelSteering.TurnLeftTwoWheels(degrees);
 		}
 
 		public virtual void TurnRight(int degrees)
 		{
-			_wheelSet.FrontLeft.TurnRight(degrees);
-			_wheelSet.FrontRight.TurnRight(degrees);
+			_twoWheelSteering.TurnRightTwoWheels(degrees);
 		}
 	}
 }
