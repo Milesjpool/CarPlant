@@ -5,29 +5,23 @@ namespace CarPlant
 		public abstract string Name ();
 		public abstract void Accelerate(int kmsPerHour);
 
-		public Wheel FrontLeft;
-		public Wheel FrontRight;
-		public Wheel RearLeft;
-		public Wheel RearRight;
+		private readonly WheelSet _wheelSet;
 
-		protected Car()
+		protected Car(WheelSet wheelSet)
 		{
-			FrontLeft = new Wheel("front left");
-			FrontRight = new Wheel("front right");
-			RearLeft = new Wheel("rear left");
-			RearRight = new Wheel("rear right");
+			_wheelSet = wheelSet;
 		}
 
 		public virtual void TurnLeft(int degrees)
 		{
-			FrontLeft.TurnLeft(degrees);
-			FrontRight.TurnLeft(degrees);
+			_wheelSet.FrontLeft.TurnLeft(degrees);
+			_wheelSet.FrontRight.TurnLeft(degrees);
 		}
 
 		public virtual void TurnRight(int degrees)
 		{
-			FrontLeft.TurnRight(degrees);
-			FrontRight.TurnRight(degrees);
+			_wheelSet.FrontLeft.TurnRight(degrees);
+			_wheelSet.FrontRight.TurnRight(degrees);
 		}
 	}
 }

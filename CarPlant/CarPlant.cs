@@ -1,31 +1,31 @@
 namespace CarPlant {
-	public class CarPlant
+	public static class CarPlant
 	{
 		public static string Log;
 
 		public static Car MakeToyotaCorolla()
 		{
-			return new ToyotaCorolla();
+			return new ToyotaCorolla(new WheelSet());
 		}
 
 		public static Car MakeToyotaCorollaSports()
 		{
-			return new ToyotaCorollaSports();
+			return new ToyotaCorollaSports(new WheelSet());
 		}
 
 		public static Car MakeMitsubishiTriton()
 		{
-			return new MitsubishiTriton();
+			return new MitsubishiTriton(new WheelSet());
 		}
 
 		public static Car MakeSandBuggy()
 		{
-			return new SandBuggy();
+			return new SandBuggy(new WheelSet());
 		}
 
 		public static Car MakeSandBuggyLite()
 		{
-			return new SandBuggyLite();
+			return new SandBuggyLite(new WheelSet());
 		}
 	}
 }

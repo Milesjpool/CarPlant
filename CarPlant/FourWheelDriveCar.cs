@@ -1,12 +1,19 @@
 namespace CarPlant {
 	public abstract class FourWheelDriveCar : Car
 	{
+		private readonly WheelSet _wheelSet;
+
+		protected FourWheelDriveCar(WheelSet wheelSet) : base(wheelSet)
+		{
+			_wheelSet = wheelSet;
+		}
+
 		public override void Accelerate(int kph)
 		{
-			FrontLeft.Rotate(kph);
-			FrontRight.Rotate(kph);
-			RearLeft.Rotate(kph);
-			RearRight.Rotate(kph);
+			_wheelSet.FrontLeft.Rotate(kph);
+			_wheelSet.FrontRight.Rotate(kph);
+			_wheelSet.RearLeft.Rotate(kph);
+			_wheelSet.RearRight.Rotate(kph);
 		}
 	}
 }

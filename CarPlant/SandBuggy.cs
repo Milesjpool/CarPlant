@@ -4,9 +4,9 @@ namespace CarPlant
 	{
 		private readonly FourWheelSteering _steeringMechanism;
 
-		public SandBuggy()
+		public SandBuggy(WheelSet wheelSet) : base(wheelSet)
 		{
-			_steeringMechanism = new FourWheelSteering(this);
+			_steeringMechanism = new FourWheelSteering(wheelSet);
 		}
 
 		public override string Name()

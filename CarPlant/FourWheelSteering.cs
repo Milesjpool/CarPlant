@@ -2,27 +2,27 @@ namespace CarPlant
 {
 	public class FourWheelSteering
 	{
-		private readonly Car _car;
+		private readonly WheelSet _wheelSet;
 
-		public FourWheelSteering(Car car)
+		public FourWheelSteering(WheelSet wheelSet)
 		{
-			_car = car;
+			_wheelSet = wheelSet;
 		}
 
 		public void TurnLeft(int degrees)
 		{
-			_car.FrontLeft.TurnLeft(degrees);
-			_car.FrontRight.TurnLeft(degrees);
-			_car.RearLeft.TurnRight(degrees);
-			_car.RearRight.TurnRight(degrees);
+			_wheelSet.FrontLeft.TurnLeft(degrees);
+			_wheelSet.FrontRight.TurnLeft(degrees);
+			_wheelSet.RearLeft.TurnRight(degrees);
+			_wheelSet.RearRight.TurnRight(degrees);
 		}
 
 		public void TurnRight(int degrees)
 		{
-			_car.FrontLeft.TurnRight(degrees);
-			_car.FrontRight.TurnRight(degrees);
-			_car.RearLeft.TurnLeft(degrees);
-			_car.RearRight.TurnLeft(degrees);
+			_wheelSet.FrontLeft.TurnRight(degrees);
+			_wheelSet.FrontRight.TurnRight(degrees);
+			_wheelSet.RearLeft.TurnLeft(degrees);
+			_wheelSet.RearRight.TurnLeft(degrees);
 		}
 	}
 }
