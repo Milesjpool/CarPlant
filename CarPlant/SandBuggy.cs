@@ -1,6 +1,6 @@
 namespace CarPlant
 {
-	public class SandBuggy : FourWheelDriveCar
+	public class SandBuggy : Car
 	{
 		public SandBuggy(WheelSet wheelSet, ISteeringMechanism steeringMechanism)
 			: base(steeringMechanism, new FourWheelDrive(wheelSet))
