@@ -12,12 +12,12 @@ namespace CarPlant
 			_steeringMechanism = steeringMechanism;
 		}
 
-		public virtual void TurnLeft(int degrees)
+		public void TurnLeft(int degrees)
 		{
 			_steeringMechanism.TurnLeft(degrees);
 		}
 
-		public virtual void TurnRight(int degrees)
+		public void TurnRight(int degrees)
 		{
 			_steeringMechanism.TurnRight(degrees);
 		}
