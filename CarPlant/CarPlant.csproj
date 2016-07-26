@@ -76,15 +76,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FourWheelDrive.cs" />
     <Compile Include="FourWheelSteering.cs" />
     <Compile Include="Car.cs" />
     <Compile Include="CarPlant.cs" />
     <Compile Include="FourWheelDriveCar.cs" />
     <Compile Include="FrontWheelDrive.cs" />
     <Compile Include="FrontWheelDriveCar.cs" />
+    <Compile Include="IDriveMechanism.cs" />
     <Compile Include="ISteeringMechanism.cs" />
     <Compile Include="MitsubishiTriton.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RearWheelDrive.cs" />
     <Compile Include="RearWheelDriveCar.cs" />
     <Compile Include="SandBuggy.cs" />
     <Compile Include="SandBuggyLite.cs" />

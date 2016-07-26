@@ -3,7 +3,7 @@ namespace CarPlant
 	public class SandBuggy : FourWheelDriveCar
 	{
 		public SandBuggy(WheelSet wheelSet, ISteeringMechanism steeringMechanism)
-			: base(wheelSet, steeringMechanism)
+			: base(steeringMechanism, new FourWheelDrive(wheelSet))
 		{
 		}
 

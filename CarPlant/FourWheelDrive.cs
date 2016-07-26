@@ -1,10 +1,10 @@
 namespace CarPlant
 {
-	class FrontWheelDrive : IDriveMechanism
+	public class FourWheelDrive : IDriveMechanism
 	{
 		private readonly WheelSet _wheelSet;
 
-		public FrontWheelDrive(WheelSet wheelSet)
+		public FourWheelDrive(WheelSet wheelSet)
 		{
 			_wheelSet = wheelSet;
 		}
@@ -13,6 +13,8 @@ namespace CarPlant
 		{
 			_wheelSet.FrontLeft.Rotate(kph);
 			_wheelSet.FrontRight.Rotate(kph);
+			_wheelSet.RearLeft.Rotate(kph);
+			_wheelSet.RearRight.Rotate(kph);
 		}
 	}
 }
