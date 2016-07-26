@@ -4,7 +4,7 @@ namespace CarPlant
 	{
 		private readonly WheelSet _wheelSet;
 
-		protected FrontWheelDriveCar(WheelSet wheelSet) : base(wheelSet)
+		protected FrontWheelDriveCar(WheelSet wheelSet) : base(new TwoWheelSteering(wheelSet))
 		{
 			_wheelSet = wheelSet;
 		}

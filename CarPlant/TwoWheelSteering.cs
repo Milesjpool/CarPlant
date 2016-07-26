@@ -9,13 +9,13 @@ namespace CarPlant
 			_wheelSet = wheelSet;
 		}
 
-		public void TurnLeftTwoWheels(int degrees)
+		public void TurnLeft(int degrees)
 		{
 			_wheelSet.FrontLeft.TurnLeft(degrees);
 			_wheelSet.FrontRight.TurnLeft(degrees);
 		}
 
-		public void TurnRightTwoWheels(int degrees)
+		public void TurnRight(int degrees)
 		{
 			_wheelSet.FrontLeft.TurnRight(degrees);
 			_wheelSet.FrontRight.TurnRight(degrees);
