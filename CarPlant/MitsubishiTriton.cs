@@ -2,7 +2,7 @@ namespace CarPlant
 {
 	class MitsubishiTriton : Car
 	{
-		public MitsubishiTriton(WheelSet wheelSet, ISteeringMechanism steeringMechanism) : base(steeringMechanism, new FourWheelDrive(wheelSet))
+		public MitsubishiTriton(ISteeringMechanism steeringMechanism, IDriveMechanism driveMechanism) : base(steeringMechanism, driveMechanism)
 		{
 		}
 
