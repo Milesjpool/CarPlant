@@ -1,6 +1,6 @@
 namespace CarPlant
 {
-	public class FourWheelSteering
+	public class FourWheelSteering : ISteeringMechanism
 	{
 		private readonly WheelSet _wheelSet;
 

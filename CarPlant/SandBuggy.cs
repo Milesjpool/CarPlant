@@ -2,9 +2,10 @@ namespace CarPlant
 {
 	public class SandBuggy : FourWheelDriveCar
 	{
-		private readonly FourWheelSteering _steeringMechanism;
+		private readonly ISteeringMechanism _steeringMechanism;
 
-		public SandBuggy(WheelSet wheelSet, FourWheelSteering steeringMechanism) : base(wheelSet)
+		public SandBuggy(WheelSet wheelSet, ISteeringMechanism steeringMechanism)
+			: base(wheelSet)
 		{
 			_steeringMechanism = steeringMechanism;
 		}

@@ -5,11 +5,11 @@ namespace CarPlant
 		public abstract string Name ();
 		public abstract void Accelerate(int kmsPerHour);
 
-		private readonly TwoWheelSteering _steeringMechanism;
+		private readonly ISteeringMechanism _steeringMechanism;
 
-		protected Car(TwoWheelSteering twoWheelSteering)
+		protected Car(ISteeringMechanism steeringMechanism)
 		{
-			_steeringMechanism = twoWheelSteering;
+			_steeringMechanism = steeringMechanism;
 		}
 
 		public virtual void TurnLeft(int degrees)
