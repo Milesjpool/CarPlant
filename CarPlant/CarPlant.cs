@@ -3,27 +3,27 @@ namespace CarPlant {
 	{
 		public static string Log;
 
-		public static FrontWheelSteeringCar MakeToyotaCorolla()
+		public static Car MakeToyotaCorolla()
 		{
 			return new ToyotaCorolla();
 		}
 
-		public static FrontWheelSteeringCar MakeToyotaCorollaSports()
+		public static Car MakeToyotaCorollaSports()
 		{
 			return new ToyotaCorollaSports();
 		}
 
-		public static FrontWheelSteeringCar MakeMitsubishiTriton()
+		public static Car MakeMitsubishiTriton()
 		{
 			return new MitsubishiTriton();
 		}
 
-		public static FrontWheelSteeringCar MakeSandBuggy()
+		public static Car MakeSandBuggy()
 		{
 			return new SandBuggy();
 		}
 
-		public static FrontWheelSteeringCar MakeSandBuggyLite()
+		public static Car MakeSandBuggyLite()
 		{
 			return new SandBuggyLite();
 		}

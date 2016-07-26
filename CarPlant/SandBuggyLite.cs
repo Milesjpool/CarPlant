@@ -2,6 +2,12 @@ namespace CarPlant
 {
 	public class SandBuggyLite : RearWheelDriveCar
 	{
+		private readonly FourWheelSteering _fourWheelSteering;
+
+		public SandBuggyLite()
+		{
+			_fourWheelSteering = new FourWheelSteering(this);
+		}
 
 		public override string Name()
 		{
@@ -10,18 +16,12 @@ namespace CarPlant
 
 		public override void TurnLeft(int degrees)
 		{
-			FrontLeft.TurnLeft(degrees);
-			FrontRight.TurnLeft(degrees);
-			RearLeft.TurnRight(degrees);
-			RearRight.TurnRight(degrees);
+			_fourWheelSteering.TurnLeft(degrees);
 		}
 
 		public override void TurnRight(int degrees)
 		{
-			FrontLeft.TurnRight(degrees);
-			FrontRight.TurnRight(degrees);
-			RearLeft.TurnLeft(degrees);
-			RearRight.TurnLeft(degrees);
+			_fourWheelSteering.TurnRight(degrees);
 		}
 	}
 }

@@ -6,7 +6,7 @@ namespace CarPlant.Tests
 	public class ToyotaCorollaTest
 	{
 
-		private FrontWheelSteeringCar _corolla;
+		private Car _corolla;
 
 		[SetUp]
 		public void Init()

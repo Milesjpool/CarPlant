@@ -5,7 +5,7 @@ namespace CarPlant.Tests
 	[TestFixture]
 	public class SandBuggyTest
 	{
-		private FrontWheelSteeringCar _buggy;
+		private Car _buggy;
 
 		[SetUp]
 		public void Init()

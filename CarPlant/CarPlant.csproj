@@ -76,7 +76,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrontWheelSteeringCar.cs" />
+    <Compile Include="FourWheelSteering.cs" />
+    <Compile Include="Car.cs" />
     <Compile Include="CarPlant.cs" />
     <Compile Include="FourWheelDriveCar.cs" />
     <Compile Include="FrontWheelDriveCar.cs" />

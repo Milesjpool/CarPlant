@@ -5,7 +5,7 @@ namespace CarPlant.Tests
 	[TestFixture]
 	public class MitsubishiTritonTest
 	{
-		private FrontWheelSteeringCar _triton;
+		private Car _triton;
 
 		[SetUp]
 		public void Init()

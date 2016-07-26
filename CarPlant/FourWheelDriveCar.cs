@@ -1,5 +1,5 @@
 namespace CarPlant {
-	public abstract class FourWheelDriveCar : FrontWheelSteeringCar
+	public abstract class FourWheelDriveCar : Car
 	{
 		public override void Accelerate(int kph)
 		{

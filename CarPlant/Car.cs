@@ -1,6 +1,6 @@
 namespace CarPlant
 {
-	public abstract class FrontWheelSteeringCar
+	public abstract class Car
 	{
 		public abstract string Name ();
 		public abstract void Accelerate(int kmsPerHour);
@@ -10,7 +10,7 @@ namespace CarPlant
 		public Wheel RearLeft;
 		public Wheel RearRight;
 
-		protected FrontWheelSteeringCar()
+		protected Car()
 		{
 			FrontLeft = new Wheel("front left");
 			FrontRight = new Wheel("front right");
