@@ -2,22 +2,22 @@ namespace CarPlant {
 
 	public class Wheel {
 
-		private string name;
+		private readonly string _name;
 
 		public Wheel(string name) {
-			this.name = name;
+			_name = name;
 		}
 
-		public void turnLeft(int degrees) {
-			CarPlant.LOG += name + " turning left " + degrees + " degrees\n";
+		public void TurnLeft(int degrees) {
+			CarPlant.Log += _name + " turning left " + degrees + " degrees\n";
 		}
 
-		public void turnRight(int degrees) {
-			CarPlant.LOG += name + " turning right " + degrees + " degrees\n";
+		public void TurnRight(int degrees) {
+			CarPlant.Log += _name + " turning right " + degrees + " degrees\n";
 		}
 
-		public void rotate(int kph) {
-			CarPlant.LOG += name + " accelerating " + kph + " kph\n";
+		public void Rotate(int kph) {
+			CarPlant.Log += _name + " accelerating " + kph + " kph\n";
 		}
 
 	}

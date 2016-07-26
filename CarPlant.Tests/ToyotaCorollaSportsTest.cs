@@ -1,52 +1,51 @@
 using NUnit.Framework;
-using System;
 
-namespace CarPlant
+namespace CarPlant.Tests
 {
 	[TestFixture]
 	public class ToyotaCorollaSportsTest
 	{
 
-		private Car corolla;
+		private FrontWheelSteeringCar _corolla;
 
 		[SetUp]
 		public void Init()
 		{
-			CarPlant.LOG = "";
-			corolla = CarPlant.makeToyotaCorollaSports();
+			CarPlant.Log = "";
+			_corolla = CarPlant.MakeToyotaCorollaSports();
 		}
 
 		[Test]
 		public void HasTheCorrectName()
 		{
-			Assert.AreEqual("Toyota Corolla sports", corolla.Name());
+			Assert.AreEqual("Toyota Corolla sports", _corolla.Name());
 		}
 
 		[Test]
 		public void TurningLeftOnlyTurnsTheFrontWheels()
 		{
-			int degrees = TestHelpers.randomDegrees();
-			corolla.TurnLeft(degrees);
+			var degrees = TestHelpers.randomDegrees();
+			_corolla.TurnLeft(degrees);
 			Assert.AreEqual("front left turning left " + degrees + " degrees\n"
-			             + "front right turning left " + degrees + " degrees\n", CarPlant.LOG);
+			             + "front right turning left " + degrees + " degrees\n", CarPlant.Log);
 		}
 
 		[Test]
 		public void TurningRightOnlyTurnsTheFrontWheels()
 		{
-			int degrees = TestHelpers.randomDegrees();
-			corolla.TurnRight(degrees);
+			var degrees = TestHelpers.randomDegrees();
+			_corolla.TurnRight(degrees);
 			Assert.AreEqual("front left turning right " + degrees + " degrees\n"
-			             + "front right turning right " + degrees + " degrees\n", CarPlant.LOG);
+			             + "front right turning right " + degrees + " degrees\n", CarPlant.Log);
 		}
 
 		[Test]
 		public void AcceleratingOnlyTurnsTheRearWheels()
 		{
-			int speed = TestHelpers.randomSpeed();
-			corolla.Accelerate(speed);
+			var speed = TestHelpers.randomSpeed();
+			_corolla.Accelerate(speed);
 			Assert.AreEqual("rear left accelerating " + speed + " kph\n"
-			             + "rear right accelerating " + speed + " kph\n", CarPlant.LOG);
+			             + "rear right accelerating " + speed + " kph\n", CarPlant.Log);
 		}
 
 	}

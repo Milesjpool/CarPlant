@@ -1,53 +1,52 @@
 using NUnit.Framework;
-using System;
 
-namespace CarPlant
+namespace CarPlant.Tests
 {
 	[TestFixture]
 	public class MitsubishiTritonTest
 	{
-		private Car triton;
+		private FrontWheelSteeringCar _triton;
 
 		[SetUp]
 		public void Init()
 		{
-			CarPlant.LOG = "";
-			triton = CarPlant.makeMitsubishiTriton();
+			CarPlant.Log = "";
+			_triton = CarPlant.MakeMitsubishiTriton();
 		}
 
 		[Test]
 		public void HasTheCorrectName()
 		{
-			Assert.AreEqual("Mitsubishi Triton", triton.Name());
+			Assert.AreEqual("Mitsubishi Triton", _triton.Name());
 		}
 
 		[Test]
 		public void TurningLeftOnlyTurnsTheFrontWheels()
 		{
-			int degrees = TestHelpers.randomDegrees();
-			triton.TurnLeft(degrees);
+			var degrees = TestHelpers.randomDegrees();
+			_triton.TurnLeft(degrees);
 			Assert.AreEqual("front left turning left " + degrees + " degrees\n"
-			             + "front right turning left " + degrees + " degrees\n", CarPlant.LOG);
+			             + "front right turning left " + degrees + " degrees\n", CarPlant.Log);
 		}
 
 		[Test]
 		public void TurningRightOnlyTurnsTheFrontWheels()
 		{
-			int degrees = TestHelpers.randomDegrees();
-			triton.TurnRight(degrees);
+			var degrees = TestHelpers.randomDegrees();
+			_triton.TurnRight(degrees);
 			Assert.AreEqual("front left turning right " + degrees + " degrees\n"
-			             + "front right turning right " + degrees + " degrees\n", CarPlant.LOG);
+			             + "front right turning right " + degrees + " degrees\n", CarPlant.Log);
 		}
 
 		[Test]
 		public void AcceleratingTurnsAllWheels()
 		{
-			int speed = TestHelpers.randomSpeed();
-			triton.Accelerate(speed);
+			var speed = TestHelpers.randomSpeed();
+			_triton.Accelerate(speed);
 			Assert.AreEqual("front left accelerating " + speed + " kph\n"
 			             + "front right accelerating " + speed + " kph\n"
 			             + "rear left accelerating " + speed + " kph\n"
-			             + "rear right accelerating " + speed + " kph\n", CarPlant.LOG);
+			             + "rear right accelerating " + speed + " kph\n", CarPlant.Log);
 		}
 
 	}

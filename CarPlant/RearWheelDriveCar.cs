@@ -1,11 +1,11 @@
 namespace CarPlant
 {
-	public abstract class RearWheelDriveCar : Car
+	public abstract class RearWheelDriveCar : FrontWheelSteeringCar
 	{
 		public override void Accelerate(int kph)
 		{
-			_rearLeft.rotate(kph);
-			_rearRight.rotate(kph);
+			RearLeft.Rotate(kph);
+			RearRight.Rotate(kph);
 		}
 	}
 }
