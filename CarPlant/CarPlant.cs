@@ -20,12 +20,14 @@ namespace CarPlant {
 
 		public static Car MakeSandBuggy()
 		{
-			return new SandBuggy(new WheelSet());
+			var wheelSet = new WheelSet();
+			return new SandBuggy(wheelSet, new FourWheelSteering(wheelSet));
 		}
 
 		public static Car MakeSandBuggyLite()
 		{
-			return new SandBuggyLite(new WheelSet());
+			var wheelSet = new WheelSet();
+			return new SandBuggyLite(wheelSet, new FourWheelSteering(wheelSet));
 		}
 	}
 }
